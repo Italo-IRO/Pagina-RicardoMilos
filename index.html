@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Landing RWD • Flexbox + Grid + JS + WhatsApp</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="#" aria-label="Ir para o topo"><strong>Ricardo's Club</strong></a>
+      </div>
+
+      <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#cards">Benefícios</a></li>
+          <li><a href="#gallery">Galeria</a></li>
+          <li><a href="#contact">Contato</a></li>
+        </ul>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menu">
+        <span class="hamburger"></span>
+      </button>
+    </div>
+
+  
+    <div class="offcanvas" id="offcanvas" aria-hidden="true">
+      <button class="offcanvas-close" id="offcanvasClose" aria-label="Fechar menu">✕</button>
+      <ul>
+        <li><a href="#hero" class="off-link">Home</a></li>
+        <li><a href="#cards" class="off-link">Benefícios</a></li>
+        <li><a href="#gallery" class="off-link">Galeria</a></li>
+        <li><a href="#contact" class="off-link">Contato</a></li>
+      </ul>
+    </div>
+    <div class="offcanvas-backdrop" id="offBackdrop" hidden></div>
+  </header>
+
+  <main>
+
+    <section id="hero" class="hero container">
+      <div class="hero-text">
+        <h1>BEM VINDO(A) AO RICARDISMO!!</h1>
+        <p>Página dedicada ao meme do Ricardo Milos, toda e qualquer imagem contida nesta página é de dominio publico, tendo em vista o objetivo da página é com cunho humorístico e educacional por favor não leve a sério.</p>
+        <a href="#cards" class="btn" id="ctaCards">Ver Benefícios</a>
+      </div>
+      <figure class="hero-figure">
+        <img src="https://m.media-amazon.com/images/I/61heAkaA2wL._AC_UF1000,1000_QL80_.jpg" alt="caderno ricardo" />
+        <figcaption>Livro de toda a verdade universal(o ricardismo e como ele vai salvar a humanidade de sua repugnante natureza futil).</figcaption>
+      </figure>
+    </section>
+
+
+    <section id="cards" class="cards container">
+      <h2>Benefícios ofertados.</h2>
+      <p>veja alguns dos benefícios que ofertamos aos membros de nosso fabuloso nosso clube❤️.</p>
+      <div class="grid">
+        <article class="card" tabindex="0">
+          <h3>Primeiro Tier</h3>
+          <p>Livro de nosso adorado Ricardo para estudo filosófico.</p>
+        </article>
+
+        <article class="card" tabindex="0">
+          <h3>Segundo Tier</h3>
+          <p>Acesso ao nosso centro de debates para enriquecimento intelectual.</p>
+        </article>
+
+        <article class="card" tabindex="0">
+          <h3>Terceiro Tier</h3>
+          <p>Direito as mercadorias do clube de maneira grátis .</p>
+        </article>
+
+        <article class="card" tabindex="0">
+          <h3>Quarto tier</h3>
+          <p>Encontro pessoal com o Ricardo em pessoa(maior honra que podemos conceder).</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content container">
+      <article>
+        <h2>Sobre o clube.</h2>
+        <p>Ricardo's Club é uma associação sem fins lucrativos que tem como objetivo espalhar a palavra de Ricardo Milos e ajudar aqueles que se encontram em desespero.</p>
+        <p>Como Ricardo sempre diz "audentes fortuna iuvat" é uma frase em latim que significa "a fortuna favorece os audaciosos" ou "a sorte ajuda os ousados".</p>
+      </article>
+
+      <aside>
+        <h3>🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥</h3>
+        <img src="https://media.tenor.com/MJEba1eRjzUAAAAj/ricardo-milos.gif" alt="gif ricardo">
+      </aside>
+    </section>
+
+    <!-- GALERIA -->
+    <section id="gallery" class="gallery container">
+      <h2>Galeria</h2>
+      <p>Imagens de referência dos produtos que os membros recebem.</p>
+      <div class="gallery-grid">
+        <figure>
+          <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUSEhIVFRUVFxcVFRcVFRUVFRUVFxUXFhUXFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGxAQGCsdHR8vLSstLy0tLS0tLS0tKy0tLS0tLS0tLS0rLS0tLS0rLSstLS0tLS0tLSstNy0tLS0vLf/AABEIAQwAvAMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAACAQMEBQYABwj/xABBEAACAQIDBAcECAMIAwEAAAABAgADEQQSIQUxQVEGE2FxgZGhIjKxwQcUI0JS0eHwYnKSFVNjgqKywvEkQ7Mz/8QAGQEAAwEBAQAAAAAAAAAAAAAAAAECAwQF/8QALBEBAAICAgEEAAMJAQAAAAAAAAECETEDIRIEMkFRE5HhFCIjQoGhwdHwBf/aAAwDAQACEQMRAD8AtZ06LJUSLOhAQAYtoQEW0AC0wnS/FEsU19kkHt4jjN9aea9NMYHrso3Loe0xHVUYSsUNwfaPw5R+nWc3N93DhwP6yrarr8/kZ1PEn9YYV5JWKxIN7i9t8rnra3hZ42UvHEJmcm8xvx/f/UmYEXOsjZOf7MttjYa7DWEisdvTdgUQKelv0llaZtdvU6KEAq2XcL2v42NteyTdg9IaeKBAGSovvUyQTbgVP3l7YoFonK3tOtCtFjIESOWiEQALRIRESAJOnToB0WdCUQBQIQESYrph0uNMijhXXNc9Y4AbJbTKt9Cd999reQG4Cyk230pw2GurNnqD/wBaatf+I7l8Z5bitp16pzVK1Rju1Y2HcBoJEy2hgNRiun+Ka4VKSA/wszAd5Nr9tpQVKpa7E6k3v2yKRBD8I8DInN92nzhAXBH7/WIFv8oSrAEUcYqgXhqt5YYXBpYXt5xTJxGUChhyxsPCWiJkXtj+RVGltJBxWIBk5y0iIrBuq95V4trv3buySK9e0g34yohnactnsT6QalNVp16fWqthnBtUyjmDox7bi89H2djademKlJwyniOHYw4EcjPBwI5RqMhzIzKeasVOm7UR4S98tEnnnR/6QioyYtS9vdqIBmPY63APePKb7A4tK1NatNsyMLgj1uOBB0I7IjOEQCI4YJgARIUSAdDEESs6UbSGHw1R/vEZEHN20HlqfCAZ/pp0pZGOGw5sbfaVAdRf7icjbeeF7DXdgiICaaQmMYKJxEEGEIEQiNssegmBmQxEQ1zDdY0RAjqVx2jwg9eeDGNFYhEAljHkLb1jDYkxqdAZKTffFURBDEAK0ULOBiwAWWSaePqhOrFVxTuTkDELmPGwjMS0A9A+jzb7MWwtZyxHtUi5uSPvJc6m28dl+U27TwVnIIIJBFiCNCCNxBG4z03oj0vStTFPEVFWsLKC3siqOBB3ZuBHHeN+iDWGJFiQMomA+lDF+3Ro8ArVD3scq+it5zfieV/SJXDY1gD7iIh7Dq1v9YhBM7eFA4RFMYPCGBAEMQBYOWFOgYCI2yx0wDAjJEQxwiCVgDRES0cKzrQAQIQE60WAKBF1g3nFjACvEJgF4haAdUnUXysGtfKQ1udje0EzoB7xgcWtWmlVPddQw7iL27+EdmT+jTGF8K1M/wDqcgfyt7Y9S01kRlE8o6f01GOqZeKozdjZQLeQU+M9WvxPjPEdo4w1qtSs2+oxbwPujwAA8IQSJUbW04GC0QndGEpBHRGKdSOhoAcSIDEteKdKrGZwQxRSa17Gw3ngO+Wn9nMoTMVtURagCkEhTfLm/CeNu0ctLfC4T/x6gXEBA2Y1KJIBcUjTKWN9WJqPYWH/AOTandMvxJdlfSxMZZLqzygES6fDL/3u7u3l4y527s+lV2cMYipTenWyOlJEpp9pYNdR7Xs2pWN7WqbhraqX8pRzem8IyxU60KJaaOQlokK0QiADecXEQwTAFLwSYJnQDp04ThAN/wDRU+uIHZSPrUE388x+jOuBimUk3emwXkSGVvOwPrPTopCFtrN9XqhPeKMF7yLD4zxW3Ce2bRbQDmfh/wBzA9Jujt2NWlva5ZOZ3kryJ5SfLvDTwma5hjahjZMfrIRoykHtHzjI10Av3ay2ZFa0l03lnsDoliMVmKrlVFzEsNSbGygczaVCg6HhAJCmHT36yN1sfoMNMzZRe17E28BqZN9NeHHl20vV0LqMPnKWOY1AAxbrHsdOGTq+Wt9JOFKl1Zvm6zMLbsuW2t9L33+kXZOEw1QWpV8xAFwoCkdpVgSJJx/1eioV8xYhgpC1XYkspByoctwFYDT7xve05J7l7NOWlaR2j7Hp4gvUTDgMz0yrKctmRmRLe1pe7rvIlLUx7LSq0l6srVX2g/8AD7QancgBxw7xYXtLulgyxNmemyjOpNN1NwbqQQeY3gkjTSZPHe4WsblgAb6CwOZSOeqG/C3bpdNwy9RaJrOO8q+dBzTs06njCgsYhaCWgHGAxnM0EQDosQmcIydFiTogtejNZkxdArqetQacQxyt/pYz2qec/Rxs4LXFWoPaAsgP3b6E99vjPRyIlYwr9pHVR2GQqtMESVtD3/AfExgTC23VT2wpsTgxe9otKmBuA8pYYpNJFo0SzADjHk8NT0RpWpM34m9FFviTPCtWueZJ8zPonZ+HCU0QbgPjqfjPnxkCsVG4Egd1zabV05bTmTOSw7ZP2Xg3qnIgu2+3ZxkUiT9iY00ayuO493GK/tPjx5RlsaOyKdPq6lOmadQ1bm7lgKbb6Y7AL77ntlricIr6OiOLMMrgke0LZhbcw4HhI+JxwHVtkZ0J95PaykiwJUakd0sJxzM5y9StKxHjGkTBbPp0vcBAIAtmYjQW3EzE7b2exWtXuAFqAFeYYqAw8TunoBYTz3ble/XAMbdYosCcpy3uSNx3CVx5mzPnxWuIZ0zoTCI07HmAYxsmE5gRkUQt0G8KILroThKdbG0qNVAyVBUQg30vTazC3EESLiNi1UYrYNYkaEDcbbjJ/wBH5ttHDfzt603E0vSPDdXiao5sWHcxuPjFM4XWsSxdPY1U77L3m58hJuG2eiH8R5n5CWhkdxrJy1ikQvOjbWqDvH7/AHym6bfML0eW7DvH5zdGEIvtWY/3/AfORXe0mY9LuO75mRa+HJBmVtt6e2ECvXvulh0eoZnvKGrTqB7cL/sTUdFawzFBvCknzEqIK09S1InzzjktVccnYeTEfKfQwngPSFQMViANwr1v/q01hzIUEmKDOtGS72Nt2qgCB7LfX2QxA7LzYbMx1OsGyu7hdGLDKO7QAGeaI2U3EudmdJatNCgC2ubaa68zxnPeuNOzh5se5cbc2scwpUTYe6Aotv0AErNrbMNIIguSbFzwztuUdwEa2WhqVTUYgBfbdiCQgvbcN5JIAXiSBL7ajEYNXJuxcEk77m/6eUnS/fmZZmtsOpluLc7XlPUokGx0npWxcFmpqzcVEDauxKDA3AB7NNecqvNicSi3psxmHmhpxMo5yTj8N1blTwOh5iRJ0Zy45jHRbQoIEK2kA0P0dpfaOH7C58qTmeg9O8F7a1AN4se8foR5TH/RLQzY4tb3KLt3ElV/5GendKKAagSfukEediPWTZVNvMCsaqLJVawJjDGS3hedFAC377Js2nn/AEYxBWsBzM37HWOGV9omM95fH5fnFgbTNsh7SPMX+UGnUvItttx+0zWpAmO7ITq6pbnYeFzf4xWHGGkUKnuGmnhHS5bY3ED/ABX9Tee54Z7qD2fpPE+nFMrj8QD/AHgPgyKw+M2hyKFhOUxYMZOBMdo0mZgEFydLfvh28JyrCoKc1wSttxBIPgRMW2F1h6oBFGnZkVsztuFVx98n8A3KOWu9jJ20cQa1LKpAp0/aZzuZhy85QqpJCjiQJfbWwvV0aNMbmbXtsNPjeRO29c4kGyMXXAApoSLb2Y+g4SQaFWqGNW68rE/GaHC4cIoUDhrGsYnsnXgfhM/Ltv8Ah4juWG2ls8qL3zKd9/3rKSvRynmDumw2kn2OpvofnM5icP8AZBu0zelnHy0Vt4XCAIbbps53ov0M0fbxL8lpr5lyfgJremWNARaX4tW/l4Dzv5TPfQ0v2WJPOog8kP5yP0lx3WVmPC+ncNF9NfGTZdI7UGIMapmFVNzHAtpLZO6N082JTsufKb16msx/Q+j9qzfhX4zVkSoZX2LaSXpnss3kdfS8r1lyVB0O46HulHSBBKnepKnttxkXhpwz8Jqm8cpDhGqB01j3GS1XWzm9m3IzyH6Q7f2hXsf7q/Yepp6eVp61s1t88Y6VYnrMZiW/xWX+j7P/AITWrkttT74ltYRF++JmlSUHGOkfp6CRM8kqbiYN4lK2bXAqoTuDCanpLq+HA41L+qzAVWKteanBbRNaphgb+wbfr6SbR8tOO/U1bS8jYrUGPZtJHqvMYdss/thvs7W4H4SFtHDhKCqd+nnxlptsgU2NuXxmZ2ntVqrXtYDcBNquTkmI2pCNYTQYU6XC9W+j0dTsupV41Kjkf6aQ9VJmZxFS5Jl7stymycOu7O1V/AVHt8RM5XMidtqR0GmNY6YNIaQzEtqeilG1Nm/EfQS4Z5E2XR6ukq9mvedT6x4tKhjbazWVO16eWoH4Poe8fpbylssbx+G6ymV47x3j928YpjMClsSraDax9zvkTBPcC/7tJ+WZQ6k/ZlS2p5H0F54XUrZ2Z/xkt/Uc3znrm2a5p4TEMDYilUAPaUIFvEiePTaunNybHAcSVs0A1VBAIN7g7vdMvvqtL+7T+kSL8sUnGHR6f0duavlExHeGSYGFTr20M9N2b9HlfEUlrUqNEq4JW7IrGxI3EdkgYfoa7vXQ0aSNhlLVRUyrbQkAEA3JA04duokTyZ+JaR6TGf4kdbYnA4c1nCiej4DZ6U1UKoBAGvG8zVCiqG6KFPNQAfSSvrdT8bf1GZWvl1cXo5puWnv2SNXb+GUDYyp+Nv6jGXxT8XfzMiJazwz9nOkrjqiOJI49syhFhNttzYHVUsNUdyxxFPrCrD3BZSNb6+96SrGBTiqnwE184r1Ll/Zbcv70T0yRnLL/AG1haa0rqqg3GoABmfE6KX8oy4Ofhnhv4zL0Q4kHBYRVI9mkAbH72Y5r9txKOpqYuzHH1ZB2vf8Aqgg6xTs66PJpLDY+FL1ByBv48Pz8JBQXsBx0mt2NhOrS/E+vM/vlA5nEZWBPCAWnMYyWlMV2sdWNLHVjJVYmhkqXG5vaHf8AeHrfxkilH9oUcyHmvtDw3+ki4dr+MymMS6KTmql6bsRg6tuJp+RqpeeYHfPXOk4T6rX6w2XIde37lhxObLpPImXjzmlNM+XaTsoWrJ/m/wBrTRsJndlMOtW5AtfU7vdaX5rJuLLb+YTm9RE+X9Hq/wDmzEcU5+/8Q9YfYyijgneoVGCpLXdEUs7HKpuNbgXRxuN9RM5Vw6Y2njMcVYO1WlRoLmsLt1dNQ9tD7yExk/SJ/wCWMUKaBepFE0euBUqGLA58u+5/DzHGVp6VquH+r0USmPrAxCt1ofKQwZEy5RcDKut/uxzas/8Afknj4+Svcz318x1GczCftXZmCoMcGBVq4ohVFQNlprWcDIuW/u+0vA6HymJsTZ64lMC/XPW0z1A2VM2XrMmW+gKjlpca77VG2ul9CuRVXD0qeJzU2NYVcwvTZStksBrlAvvtpcyS/Tyj131gYSl1xFnfrtTpbT2dNBa++2kI8c/p8f7E/i+PznE/zRv89b6H/ZmDp0K+IqpUKriXpUlR9WRSFAN99yHJPKQ8VgsJRRHrJUviLtTRW1pUjbKWN9TZhe99b8pU4zbwfC08MQvsVGqs/WAl2YudVtp754ndJtPpZRNOkKuHp1alGwRzUtoLbxY66DmLi8I8fr+wtHJ9zPc/Px8fr8rzb2FFWsWrORQwlBFsvvMSSQo5aZfMSp2lsyg2EXF4cPTGfq2Rzm8QbnXdx4wML0sTrazVaVOpSr5c1I1PdyqF9l7a7uQ4boztzpLTrIlGmlOhQpm601YNdtfaZtLnU+Z3wtNZz0XDTkrMRM4iMfPWu+vvLNbdH2P+YTOiX22qwalowOo0BEobTXh9rl9fMTy9fS82TU+zI5N8R+kkESBse/teHzlnTpkkASp2xrpfbA2eWs53flvmkJkfZuG6ukqcd57zvjlRoRCLzmQVHkZmiu0CUlpljqxpY6sCOoJU0BlLId6m3hvB8pbJIW01CstTgfYb1K/MSbQ0457wwH0ibTJcYYaKAKjfxMbhR3Aa+I5TGsDwM0/0iIv1hKgPv09RyKsRfxB/0mZYvKrpF9gN4YN98UEGCV5RpCyQbR3NzgFIAMQmLEvAEzRM0IwQIB2adeEFEXSACCYl4TG8SwgFjsd9WHMX+Xzms6NYdXqHMPdGYd4YfnMlsc+0RzGnhPR9i4AU6asR7RGvcTcD0kTtrWcVWLtIlV47WeRSY0EJjRM52jZMYa8RxY2IYMCPKYONpZqbDsuO8aj4esQGFUf2T3RScbeN9NqpOMqA/cCIO7IH+LmUUsuktUNi65B06xhx+6cv/GVhPZKjRW2WKGghxFuIEUmcDEtEgDmYRMojRM7NADNIRRSEbzRc8APqx2wSBEzRM0A4kcoJMXSdAJ+waqLXQ1DZb2J4C/E9k9WeoN43fKeNCeo7Nqk0KR/w0/2iKVRPWEmo14y7RXaMsYAhMEtEZowzxBuLxQY1nihoyPBoNd9LX1O7w/YghpUdI8V1VKpUB1CWX+ZjlX1I8pM6VTfbyWtQa5vqbm53XN9/jvjRUjhJrHgYywPAgjkZaZR1a8RoVRUO8ZT6Rr6u33TfxgRcs6xhCjU5AxRSf8PrAAtOtHRRf8J9O6dUosOHG2nPX8oAzaLaF1L/AIG9InVN+A+kAS06wndU/wCD1EFqb8reI/OAFYQbQAzA30PeRb0nK4vcXHju9IBIpYdm3Cej7MXJQpLe9qaC/wDlH78JgMNU5N32vfzO7ymw6PkmkSTpmNvIX8LxSqIWbNG2aczyO7xArvGi0Rmg3gbbToJaCWjSdvMz09qEUF1NmqAEcNFZr+k0GeZjp6/2NMf4l/8AQ35xGwz9hi98RjGieR8CJSThQRo4YfdMEvbevipnAqdzecARndd8UYxuV5xLjt9Y2SOVj6QCbh8Ze43TqlQ3Ou9vk0iAgWuO7ug1X0/zd3OGDyeq1SeMZa/4oz3kxfZ7YEPL/GYmQfiMQZO2GoXlAGnURuPvGRvjCbg37JsOj+IPVFTwYkeIF/DT4zG0G13HWa3Y2lM/zfISZVCyZo0zRCYJMRlJg3iEzgIjbMmDecTG2MaBkzI9PKt+qX+Zv9o/OagmY3prVPW0hwysfMj8ozZsxp9Y+YEZGS574w7KeFodRzI5ECLe24wjVPGNGLmMYOFtIm8an93gCOfv4QAdORihl/D6mGEERRAOUj8HqY6P5R6/nBWLEDTk8h5fnAznmfhDcxq8YSMNUsd01Ow2up5XHnbX5TL4UXOvOanYw+z8T8BJk6rAmDOEQmS0KTBzwTBiPD//2Q==" alt="camisa ricardo masculina" />
+          <figcaption>Camisas de qualidade.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNHE3amLPR_vGG6GZNC0owMZGSYZ71x6iy1A&s" alt="casaco natalino ricardo" />
+          <figcaption>Já adiante o seu presente de natal.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQEA8QEBAVEhAVEBAVFRUQFhUQFRAQFRUWFhYTFxUYHSggGBslHhcXITEiJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQGy0lHyUtLTIvLzUtLS0yMCswLS0rLSsvLS0tLS0tLy0rLS0tLS8uLS0vLS0tLTctLS0tLS0tLf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAAAQMEBQYHAgj/xABGEAACAQIDBAcDBwgKAwEAAAABAgADEQQSIQUxQVEGBxMiYXGRMoGhFEJScpOx0RUWVWKCksHwIyQzQ1Rzg7LS8UTT4SX/xAAaAQEAAwEBAQAAAAAAAAAAAAAAAgMEAQUG/8QAKREBAAICAQMCBQUBAAAAAAAAAAECAxESBCExQVEFEyIyYRRCcZHhwf/aAAwDAQACEQMRAD8A7jERASJMQIkxEBERAREXgRJlvjMWlJDUdgqrvO+3pLD8sgqWRGa9GrVpgjIagp20CnvC5I1I4zm4Sisz4hlpGYTXqHSB6lOjVWk4BrmmUABZ1yEllFtQDy5HykYHG1qz0WzI9LtKqs1MPRN+zYhGpPxuAbg8JzlCc4bRvfo2LPJBmqbJ2lVxCo7hqJTFU0sC1qiNoUYMe8RzlfCbTrB6KOUHaV64GfNUqVEVyBlVFsgAtqxO6ci0S7bBaszE+jZJMwD7aqIcMvZmp2tetTLLpkyVcgJAFt1zw9ky9ba9Jf7Rsg7RkDPYKWUkEZtw3cbXktwhOO0ejIyZAMmdQIiICIiAiIgIiICIiAiQJMBIgxASZEQJiRLfH4tKNNqlRsqKLk/w84diJntDztLaNPD02qVGsoHvY8gOJmmbS6X4ogVKVHsqJAANRSxJN9b3t/0d8xWM258qxIqVjlopnyJbORpppuLXsddNPXEmtZWRSxDNnd6hzPWqDQM54AcFGg8TrM18u/EvX6foeNoi9d+/tH4/MrijtbEJUeqlVlqObsRbveYtb4SnX2liGqdt2zdsNzk6r5W3DwltEz7l63yqb8R/S9xe1q1V2qNVbtKaU1pNldRe5z1ABVIVt2uoPITIbK6RVRXpVMTVeoiB9BbeUKg20HGYIiSBJc53tX+mxzXjr/P4XtTbGJbsy1ZyUN0ufZO6/ifEy4wW38QiunbOFYNYrlY03Y5s6htDrfTdqd0xeWMs5yslbp8Vq8ZrDZ8DtmnSSmtavUeqtRndsMAiYkZ8y9opsFbdmy79bk8MV+X8QKlZ6VQ0xUqM5UWYAk8iN/j4TGWi0lOS0qsfSY6fn+WRw23sVTc1BWYsTdgxzK3mp09LTduj3SynXtTqgU6p3a91z+qeB8D8ZziQ7Gw01D7qapTGUjedN4PAWHHQ3v2mSYR6jo8eSPGp94duETTuh3SU1CMPXb+ktZHP95+qf1vHj579wmutotG4fP5sNsV+NkyIiSVJiRECYkRASZEQEmIgQYkxAiJMiAM5z1hbYL1hhlPcp2L2+dUIuAfIfEnlOiVXCqzHcFJPkBOGYqu71ajVAVdnZmDaEFje1j5yjPbUael8NxRbJNp9FQNPSsCARuO48+E84SrapTN1ADrc1F7RQOJKD2vKe6ldXVUFR2FF6qKMqpT7LNdWVRrc8b+Ey6e5Np5RGkgyRKQM8nFIN7j1vOJTMQyhDdrRRaSHDNRZmqWu6OiXqEte6kMQANxBHOW9pbnaxyCmGc073ygNlvz3ayj8vH0X/dk7TtlwxGPfK29z7r8CVsLTOcPel2aAu61m7MOot3Q1jrrMWNoD6D/uxUxaMLMr2+qf4Tiy96zGosyT06ahe84qvdzSdGUU0bVcrH2xbjPBQS3O0VbLmc3VVUdpm7qDcoJ4T2mKRtzA+RiXcc9vO0ssipSZQrFSFb2SQQG8jxh2nrF1QS7h7mqKJZNSKbUg6aabiCpA1tcjlEQ7a9omIiPKitUqQQSCCCCN4I1BE6z0b2oMTh6dT5+quOTjf67/AHzjzvNy6scYc+IoncQrjlcHK33rLMFtW0xfEsUWxcvWHRIiJseAREQEREBERAmIiAiIgIiRAxvSbE9lgsZU+hhq7e8IxnFtqOFquM9wq01LHiUpqpPqDOu9Oz/+btDwwtf/AGGfO+CrmsxP90psq8GI+cZnz+z0+gtXHWbz58NhXFlvYXTm2gPkN5nsFzvc+SgKPx+Mx1fGrSUX1J3D+eEsPy299Co8BKYpMrcnV2n1bD2K8dfrEt98qKANwt5TE4fbAOji3iPwmSpVAwuDceE5NdKufL1VgYvPMkQPV56BniAYcVAYZVPtAHzmP2ltDscotcte19wtbf6zDVsZVrG2rH6I3D3bvWSiu3JvrwzdfGUk9lyD+oSQP4TxR2hm0Vw/g3cb1Gh9JjaeyKjauwXwGp9TLTGbNrUjmQ9oo5aOviOccapVz5a94lsQxYJynutybj5c5t/V1i7YmlTzC79uMt9bKqNmtwvuvxy+E50lXtqQLXB9CGHzhymwdU2ML7VpU39tErgn6QyGxikas0ZM0ZsVot5iNu8xETa8QiIgIiICIiBMREBERAREQNe6dYmiuBxFOsTatSqUQEtmLVEI0vppvv4T552fS7MtT+iSPPXfOy9bV7YP6Oatf61kt8Lzjtbu13HM39RM2Wfq014a/Tt6OzO1qFqjHJfRRpccieUo4/bGHo3o06QqEaECyqvhexuZeYzEFKFV19oU2I8DbQzW9iUVb2vjGOnLy5kvx7QqptSkzWamaPip7RB5iwIHlMmnbUyMoJuNCneDDhYjh5zD7bRU1WbB0OrF8ML/ADXdR5aN/GSyRxjcI4rcp1LP0ibC++wv58Z7lMGegZna3uJEXgUcVhUqgBxexuOBHpLTHY6hg0FxYm+VEF2c8f8AszIzn/SGuXxzhjouVV8BlB+8k++WY68p0qyW4xtlm6WsDc4bueD628ssy+B2jTxCZ6Z8CDoVPIiYN0pmnra9pjujlYpi8q+y6sCPIXB+Hxlt8Ua3Cmma29S2qvYXmT6sXo0doriqzEAK1MEbgz2GZvAC49/hMPi20M9bIFqTHmW+AmeJ1O2iY3Gn0sIlLCX7NM2/It/O2sqzc88iTIgIkyICIiAkyIgJMRAREQNY6wdkNicGezXNVpMKigb2ABDKPHKSQOJAnAtpkCspHFR95E+ozOB9cez1obTVkQIlXDo9lAUGoHcObDj7JJ8ZRlr6tGC/7WByB0KncQQfI6TS8VRrYVipBtfRuDDzm5YdtBLxLEa6+crpfitvj5ufUadbEsFRSx+A8zuE6FsnBChRSkDe2pPNjqTKqADcLeUqAxfJydx4ooqXnoGUwZIMrWqvKLyC2gnjNA95pqPS7Yzs/wAoogsbAOo36aBgOOmh8ptRaeGMlW01ncIXrFo1LmBxr2y+6bB0X2Y6k16gIJFlB32O8kTaXUXvYX5219ZSqGWWy7jUKq4eM7WGPbSbJ0F2S2Kq4ekBdAQ9U8FpBrtfxPsjzmrbRed56rdmpR2XhGCgPVp9q7Wsz9ozOuY8bKwAvuAkaU5S7kvxq2wSYia2MiIgIiICIiBEREBJiICIiAnKuvvZZOHwuMAv2NVqb24U62WzH9tFH7c6rLTa2zqWKo1cPWTPSqIyMN3dPI8DxB4ECctG40lW3GdvmbZ9UFRaZGmZT6V9EcXsaq2dWq4It3MQouFBNgtUD2G3DkeHIWeGx6sLgzJasw2UvEsus9AyyTFLznv5SvOR0nteBoLSyOKXnKeIx6qpN9w08+EaNwvxYcJ6zTA4Ta5LWYix5cDMh8rHOJrMOReJX2aeSZafKhzEHEjnOad2uGMt6hnhsSOcsMRj7sEpg1KjGypTBdmPIKNSZ2I25MvFSk1evSw9PWpVqJTXj3nOUHyF7+6fUeBwy0qVOkvsoiov1VFh8BOZdVXV7Vw1T5fj1AxBUijS0bsA2hdyNO0IJFhuBPE2HVJqx04wyZb8p7EREsVEREBERAREQIiIgJMiIExEQEREDxUphgVYAgggggEEHeCDvmgbe6n9l4hi9EVMI51/qzBUJ/y2BUDwXLOhRA4hi+o/FLfsNpqw4CrSKG3iVZr+k0LpD0bxWDdqZxtCvUG9cOarFTxBJphQRyvfwnfesTbjYeilGmctSrm7w0K01tmtyJuB6zlyMu6wmfJeInUQ04qTaNzLnfyHFn5x9T+EHZeL3G5nSgPCe1WV/Msv+XVzRdi4rfrp4SPyXixrdh6zpmU31gpHzLHy6uapgcXcXcqOZuQPRSZvOwOq/GYxO0pbTwxTS+QVWZCRuZGRSp85f3A3jSXOxtsthay1qR0B7y8HTip/nfO1yd+8IXx9vplkNn9R6/8AlbRq1ByoItHTlmYtf0E6D0Z6HYDZw/qtAI5FmqNepUYci7a28BYeEzeGrK6I6m6sqsDzBFwfjKk1REMczM+SIidcIiICIiAiIgIiIESZEQERECYiICIiAlDG4pKNN6jmyIpYnwErzn3WTtYl0wimy5Q9T9YknIvutf3jlI3txjaVK8p003bm02xdZ69Xjoo4U0G5R/OpvNaw71DVetTpk0ATTzfNNXRigO7MF1tymSXZWJxmIp4bD2XtGIao2opIAWZio1NgDYcTYTqe1ui1LD7Gq4TDqf6Gk1VSbZ6lan3yzHizkEH63AATNWk2iZa7XikxDl9HFjjcHxBl3SxK7hc+QMxGHxWcAj/6Je0q4HOVrly9Ug6gj+eMkYtAN/wMpHE66giUMRX+jA84rGMQezQnQ8/590sth6B6FZClemSjh9GV10N5snQOj8o2lQpnVaYas3+mVyi/12U+4zYOtToaWzbTwgAroo7dNwr0V0z3+mo48VFuAllabrMqbZdW0yHVxty/9TqNuBNInkNWT3bx4X5Tf5wHZVd0yuDlqKwOmuVhunb9h48YnD0qwFs66gcGGjD1BluG241KnPTU7hfxES5QREQEREBERAREQIiTECIkxAREQERECDOM9MMZmxmMcj2XKDypgJ94J987MTOGbRrrXq1qhHdqVKjW8GYm3oZRnntDR08d5lsnVJs9neti2HcCGmhPz3LAuR4DKBfxI4GdE2xRZ8NiET22oVVX6zIQPjMJ0E2wuIodmEVGohVIRQq5TfKQo0XcdPCbFiaqojO5CqqkknQAAamTpERXsryTM27vnhM1lOinQHx/Ay5S/MTE7TxVU1zUrFqSVcTVerURVqUkpMwK5EABBAvvIJ899vSx6dz+sG3ygo5NFsqUPmVb5tSQGOXfp4TbX4LnvWLY7VtH43P/ABd+prHaYmGxZnvvH4ylWzcx7pktkbF7ailXtGIbNYpTABAYgMLvfUC9vGX35FRNWQtYfPRgPPTErPKyY7UtNZjvDbGPcb3C56r6L/LmIHcTDvmPi7Jb7j6GdVxlAVKdSm3sujKfJhY/fNH6u8ZSD1qKhVZsrC1M0i+XQ6mtULW03kcbbzN+l+KPped1EayTD56alUw+IqYeqMtRGKsDxI3MOakag+M6v1a4othHpkf2dZwPEMA/3lvhNP6abWTFYm6ooFIuitYZzY94lt9r7h+M2HqwxQtiKPG6VB4gjKf9o9ZVTUX7Lcm5x7lvsRE1MhERAREQEREBERAREQIkyJMCJMRAREQPLrcEc5wTGbG2jh6rUvkmIZRUZFanTNVHGaysCqmwI11ItfW077ItIWpFvKdLzXw1boBsGrhKLPWI7WtkZkChexsDZCQSGIubkaffKHWfjSmFSmP72qAfqKCx+IWbiBNE628O3yWlXUXWlWGfwSoMub97L6zlo1TUO1nd4mXOFrDdMdjqb0gDQq9jTNelUdbXQMpFquW3zeIG8DdKwqDeN0r4HCDF16GG1y1aqo1tD2ZPfI8coaR6XqcmDJFqf17teStbR3XGHemKKuwSq7M/fy4W1Q527wD4ZmsdTYn0lKkQhzBVBtYlUSnf3IAJvPWL0UwuHwQr4aiKRo1VYine3Z1DkYWvoAWB03WPMzngrXGm+Q6j6stre8zK6vUzfHFfSGX2ftI0sRSrqbFHVj4gHvD3i4987oJ884Km1arSw6a1KtRUHG1zq3kBcnwBn0Mg0Elh9WLqPMOO9NejeMw1Zno06mIpVajuDQpF2ps7E5GC5j+1a3lM/wBVey8VTbEVsTRqUrqiIKwyswuWY5eA9neOc6LEnGOInaE5ZmuiIiWKiIiAiIgIiICIiAiIgRJkSYCIiAiIgIiICYTpm6DAYztBdWoPTI5moOzHxYTNzDdLsA2IwWJpKLuaZZRzdCHUe8qB75y3h2vmHCKTGmMlt263ETZurfBr+U6DupDZaxXX5xpsLW4aFtfKYBKtwDNz6q8OauLq1j7NKllH+ZUOmvgqt+8Jkp90NuTtSW+dNKSvs/Gq244erpuv3SQLzhNJTR0C2H73uvPobaeEFejVondUpuh8AykX+M4AjsLo4s6kq6n5rqbMvuIMszR4V9PPaYbB1c5RtGlVdRdlqU0O6zMAc3opH7U7TON9XuFNbaFI/NpK1RuW7Ko9WB/ZnZJPD9qvP9xERLVJERAREQEREBERAREQEiTECJMiTARIkwEREBETWOsDpb+SsMlfsTWLVlpgXyKLqzXZrG2i23bzA2ea30l6WUsLmpp/SV7eyNyG2hc/w3+W+cz2r1v1sRSKU6Aw+ou61WY217osgIJ5jkZrA6Qk3OQMd51YE+8rK7zb9qykV82lnmAJYkC5JJ0tqdd037qqf+ixKAd0Vl1HFygzD3AL6zjtXpExBCoB7yf4TO9CesA7No1KQw3bs9QuztUNPgBbKEPLffjK8dJi25XZclbV1D6AnDNsMHxeLZlAf5TWBHIhyPumWHXO3+AX7Zv/AFTQMdtkvisRiVGRarlzTOZ8jMbmzWF9SeG6w4SeWs2jsrw2is92/wDRTb4wVRyUDU6mUPlAzDLfKR6nSdT2fj6WIQVKThkPEcDyI4HwM+cPzitvT4kfwl3srpxVw1RalJSNQSoZgtQDgwtqN/lI05V7TCWThbvE930dE5Fgeuk1KtGmcCAHq00utVnYZ2C6L2Yudd1xOuiXs5ERAREQEREBERAREQEiTECJMiTARIkwEREBOAdcG32xOPNCnVD4egFXKPZXEjMKh03sL5b8LEc79/mDqdDtmMzM2z8KzMSWJoUyWYm5JNtSYHzRQJsdAbMptv01lZWNxc31JuQRYW3T6QXobssbtn4UeVCn+E9N0Q2Yd+Awx/0af4QPmxKoso5EH331nsPoQGtqTpcXvw/nnPo78zdl/o7C/YU/+Mn8ztmfo/C/YU/wgfO61db3uLjTXuwX0IzXPjmn0V+aOzf8Bhvsaf4R+aWzf8Bhvsaf4QPm/FPm3czvPPjr90piroBfg2ovpcCfSZ6H7M/R+G+xp/hPP5m7L/R2F+wp/wDGB80VqhzAjeLa6g3HzvAz6I6s9vnG4Ck1Sr2mITMlbcGDAnKWA5rY3467t0vvzL2X+jsL9hS/4y/2XsXC4XP8mw9Khntm7FFp5yL2vlAva59YF/ERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQP//Z" alt="funkopop ricardo" />
+          <figcaption>Brinquedos para colecionar.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    
+    <section id="contact" class="contact container">
+      <h2>Contato</h2>
+      <p>Para fazer parte do clube preencha o formúlario abaixo, onde entraremos em contato via WhatsApp e também sanaremos possíveis dúvidas.</p>
+
+      <form id="contactForm" novalidate>
+        <div class="form-row">
+          <label for="name">Nome</label>
+          <input id="name" name="name" type="text" required minlength="2" placeholder="Seu nome" />
+          <small class="error" id="errName" aria-live="polite"></small>
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="seu@exemplo.com" />
+          <small class="error" id="errEmail" aria-live="polite"></small>
+        </div>
+
+        <div class="form-row">
+          <label for="message">Mensagem</label>
+          <textarea id="message" name="message" rows="5" required minlength="10" placeholder="Escreva sua mensagem"></textarea>
+          <small class="error" id="errMessage" aria-live="polite"></small>
+        </div>
+
+        <div class="form-actions">
+
+          <input type="hidden" id="waNumber" value="5581999999999" />
+
+          <button type="submit" class="btn" id="submitBtn">Enviar (validar)</button>
+          <button type="button" class="btn outline" id="whatsappBtn">Enviar via WhatsApp</button>
+        </div>
+
+        <div id="formFeedback" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <p>© <span id="year"></span> Ricardo's Club — audentes fortuna iuvat.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
